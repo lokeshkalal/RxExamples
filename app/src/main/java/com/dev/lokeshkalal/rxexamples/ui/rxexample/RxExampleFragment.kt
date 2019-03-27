@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import com.dev.lokeshkalal.rxexamples.R
 import com.dev.lokeshkalal.rxexamples.ui.rxexample.operators.JustFragment
+import com.dev.lokeshkalal.rxexamples.ui.rxexample.subjects.ReplaySubjectFragment
 import io.reactivex.Observable
 import io.reactivex.functions.Consumer
 import io.reactivex.schedulers.Schedulers
@@ -37,6 +38,11 @@ class RxExampleFragment : Fragment() {
     private fun initViews() {
         disposable_fragment.setOnClickListener { onDisposableClick() }
         just_fragment.setOnClickListener { onJustClick() }
+        replay_subject_fragment.setOnClickListener { onReplaySubjectClicked() }
+    }
+
+    private fun onReplaySubjectClicked() {
+        changeFragment(ReplaySubjectFragment())
     }
 
     private fun onDisposableClick() {
